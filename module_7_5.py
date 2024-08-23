@@ -9,8 +9,8 @@ for root, dirs, files in os.walk(directory):
         file_info = {
             'name': file,
             'path': file_path,
-            'last_modified': time.ctime(os.path.getatime(file_path)),
+            'formatted_time': time.ctime(os.path.getatime(file_path)),
             'size': os.path.getsize(file_path),
-            'parent_directory': os.path.dirname(file_path)
+            'parent_dir': os.path.dirname(file_path)
         }
         print(file_info)
